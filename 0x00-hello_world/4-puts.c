@@ -1,11 +1,10 @@
 #include <stdio.h>
-
 /**
- *main: Print info
- *return: 0 always
+ *main: Prints out and string to stdout
+ *return: 0 if success.
 */
 int main(void)
 {
-puts("Programming is like building a multilingual puzzle");
+puts("\"Programming is like building a multilingual puzzle");
 return (0);
 }
