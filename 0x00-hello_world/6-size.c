@@ -5,9 +5,9 @@
  */
 int main(void)
 {
-printf("%ld", sizeof(char));
-printf("%ld", sizeof(int));
-printf("%ld", sizeof(float));
-printf("%ld", sizeof(double));
+printf("%ld byte(s)\n", sizeof(char));
+printf("%ld byte(s)\n", sizeof(int));
+printf("%ld byte(s)\n", sizeof(float));
+printf("%ld byte(s)\n", sizeof(double));
 return (0);
 }
