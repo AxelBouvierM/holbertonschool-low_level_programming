@@ -16,8 +16,7 @@ for (n = 0 ; n <= 9 ; n++)
 for (m = 0 ; m <= 9 ; m++)
 {
 result = n * m;
-}
-if (result >= 10)
+if (result >= 10 && m != 0)
 {
 _putchar(result / 10 + '0');
 }
@@ -32,5 +31,6 @@ _putchar(',');
 _putchar(' ');
 }
 _putchar('\n');
+}
 }
 }
