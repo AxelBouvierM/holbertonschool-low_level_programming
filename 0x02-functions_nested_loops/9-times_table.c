@@ -20,12 +20,17 @@ result = n * m;
 if (result >= 10)
 {
 _putchar(result / 10 + '0');
-_putchar(result % 10 + '0');
 }
-else if (result < 10)
+else if (result < 10 && m != 0)
 {
 _putchar(' ');
-_putchar(result % 10 + '0');
 }
+_putchar(result % 10 + '0');
+if (m != 9)
+{
+_putchar(',');
+_putchar(' ');
+}
+_putchar('\n');
 }
 }
