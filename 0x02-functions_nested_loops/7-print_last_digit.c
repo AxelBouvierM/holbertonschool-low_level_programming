@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  *print_last_digit - Prints out a string to 10.
  *Return: 0 if success.
