@@ -11,9 +11,9 @@ int n;
 int m;
 int result;
 
-for (n = 0 ; n <= 10 ; n++)
+for (n = 0 ; n <= 9 ; n++)
 {
-for (m = 0 ; m <= 10 ; m++)
+for (m = 0 ; m <= 9 ; m++)
 {
 result = n * m;
 }
