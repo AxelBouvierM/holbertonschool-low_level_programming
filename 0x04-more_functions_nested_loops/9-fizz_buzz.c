@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
  *main - Prints out a string to 10.
- *return: Returnn.
+ *Return: Returnn.
  */
 int main(void)
 {
@@ -18,12 +18,17 @@ else if (i % 3 == 0)
 {
 printf("Fizz");
 }
+else if (i % 5 == 0)
+{
+printf("Buzz");
+}
 else
 {
 printf("%d", i);
 }
 printf(" ");
 }
+printf("\n");
 return (0);
 }
 
