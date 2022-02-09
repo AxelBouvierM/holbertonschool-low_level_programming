@@ -1,0 +1,29 @@
+#include <stdio.h>
+/**
+ *main - Prints out a string to 10.
+ *return: Returnn.
+ */
+int main(void)
+{
+int n = 100;
+int i;
+
+for (i = 1; i <= n; i++)
+{
+if (i % 15 == 0)
+{
+printf("FizzBuzz");
+}
+else if (i % 3 == 0)
+{
+printf("Fizz");
+}
+else
+{
+printf("%d", i);
+}
+printf(" ");
+}
+return (0);
+}
+
