@@ -5,24 +5,18 @@
  */
 int main(void)
 {
-long int a;
-a = 612852475143;
-long int div = 2, var = 0, maxFact;
+long int i = 2;
+long int n = 612852475143;
 
-while (a != 0)
+for (i = 2; i < n; i++)
 {
-if (a % div != 0)
-div = div + 1;
-else
+if ((n % i) == 0)
 {
-maxFact = a;
-a = a / div;
-if (a == 1)
-{
-printf("%ld", maxFact);
-var = 1;
+n /= i;
+i--;
 }
 }
-}
+
+printf("%ld\n", n);
 return (0);
 }
