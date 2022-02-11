@@ -2,6 +2,7 @@
 /**
  *_strlen - Prints out a string to 10.
  *@s: First variable
+ * Return: count
  */
 int _strlen(char *s)
 {
