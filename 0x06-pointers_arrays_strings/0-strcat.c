@@ -7,18 +7,17 @@
  */
 char *_strcat(char *dest, char *src)
 {
-	int i;
-	int n = 0;
-	int length = _strlen(dest);
-
-	for (i = 0; i < n && src[i] != '\0'; i++)
-	{
-	dest[length + i] = src[i];
-	dest[length + i] = '\0';
-	}
-	return (dest);
+        int i;
+        int length = _strlen(dest);
+        for (i = 0; i <= length; i++)
+        {
+	if (src[i] != '\0')
+		dest[length + i] = src[i];
+	else
+	        dest[length + i] = '\0';
+        }
+        return (dest);
 }
-
 /**
    * _strlen - check the code
    * @s: pointer to a
@@ -26,12 +25,11 @@ char *_strcat(char *dest, char *src)
    */
 int _strlen(char *s)
 {
-	int length = 0;
-
-	while (*s != '\0')
+        int length = 0;
+        while (*s != '\0')
 {
-	length++;
-	s++;
+        length++;
+        s++;
 }
-	return (length);
+        return (length);
 }
