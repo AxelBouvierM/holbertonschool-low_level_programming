@@ -18,6 +18,7 @@ char *rot13(char *str)
 	if (str[i] == l[ln])
 	{
 		str[i] = n[ln];
+		break;
 	}
 	}
 	}
