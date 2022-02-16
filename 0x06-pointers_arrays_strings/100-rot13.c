@@ -6,24 +6,20 @@
  */
 char *rot13(char *str)
 {
-	int i = 0; 
-	
-	while (str[i] != '\0')
+	int i;
+	int ln;
+	char l[] = "ABCDEFGHIJKLMabcdefghijklm";
+	char n[] = "NOPQRSTUVWXYZnopqrstuvwxyz";
+
+	for (i = 0; str[i] != '\0'; i++)
 	{
-	while ((str[i] >= 'A' && str[i] <= 'Z') || (str[i] >= 'a' && str[i] <= 'z'))
+	for (ln = 0; ln < 26; ln++)
 	{
-		if ((str[i] > 'M' && str[i] <= 'Z') || (str[i] > 'm' && str[i] <= 'z'))
-		{
-		str[i] -= 13;
-		break;
-		}
-		else
-		{
-		str[i] += 13;
-		break;
-		}
+	if (str[i] == l[ln])
+	{
+		str[i] = n[ln];
 	}
-	i++;
+	}
 	}
 	return (str);
 }
