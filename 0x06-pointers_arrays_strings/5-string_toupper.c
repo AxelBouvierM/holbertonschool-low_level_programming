@@ -21,7 +21,7 @@ char *string_toupper(char *str)
  *    * _strlen - check the code
  *       * @s: pointer to a
  *          * Return: length if success.
- *             */
+ */
 int _strlen(char *s)
 {
 	int length = 0;
