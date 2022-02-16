@@ -8,8 +8,8 @@ char *rot13(char *str)
 {
 	int i;
 	int ln;
-	char l[] = "ABCDEFGHIJKLMabcdefghijklm";
-	char n[] = "NOPQRSTUVWXYZnopqrstuvwxyz";
+	char l[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char n[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
@@ -20,7 +20,6 @@ char *rot13(char *str)
 		str[i] = n[ln];
 	}
 	}
-	break;
 	}
 	return (str);
 }
