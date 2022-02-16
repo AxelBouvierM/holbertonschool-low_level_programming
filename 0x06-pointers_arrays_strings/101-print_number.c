@@ -1,25 +1,35 @@
 #include "main.h"
 /**
- * print_number - check the code
- * @n:  First variable
- * Return: Retorno
+ * print_number -  prints n elements of an array of integers
+ * @n: variable.
  */
 void print_number(int n)
 {
-	unsigned int num = n;
-	
+	unsigned int numbers;
+	unsigned int positive;
+	unsigned int count;
+
 	if (n < 0)
 	{
 		_putchar('-');
-		num = -num;
+		numbers = n * -1;
 	}
-	if (n == 0)
+	else
 	{
-		_putchar('0');
+		numbers = n;
 	}
-	if ((num / 10) > 0)
+
+	positive = numbers;
+	count = 1;
+
+	while (positive > 9)
 	{
-		print_number(num / 10);
-		_putchar((num % 10) + '0');
+		positive /= 10;
+		count *= 10;
+	}
+
+	for (; count >= 1; count /= 10)
+	{
+		_putchar(((numbers / count) % 10) + '0');
 	}
 }
