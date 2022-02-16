@@ -6,9 +6,9 @@
  */
 char *rot13(char *str)
 {
-	int i; 
+	int i = 0; 
 	
-	for (i = 0; str[i] != '\0'; i++)
+	while (str[i] != '\0')
 	{
 	while ((str[i] >= 'A' && str[i] <= 'Z') || (str[i] >= 'a' && str[i] <= 'z'))
 	{
@@ -23,6 +23,7 @@ char *rot13(char *str)
 		break;
 		}
 	}
+	i++;
 	}
 	return (str);
 }
