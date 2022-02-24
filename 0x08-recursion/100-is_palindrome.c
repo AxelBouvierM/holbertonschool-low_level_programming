@@ -16,7 +16,7 @@ int _strlen_recursion(char *s)
 
 /**
  * palid - function with conditions to fulfill the main.
- * @s: Pointer
+ * @str: Array
  * @start: Variable where start a string.
  * @end: Variable where end a string.
  * Return: Return recursion.
