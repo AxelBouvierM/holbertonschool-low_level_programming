@@ -5,7 +5,7 @@
  * @argv: Pointer with the number of elements
  * Return: Return
  */
-int main(int argc, char *argv[])
+int main(int argc, char __attribute__((unused)) *argv[])
 {
 	printf("%d\n", argc - 1);
 	return (0);
