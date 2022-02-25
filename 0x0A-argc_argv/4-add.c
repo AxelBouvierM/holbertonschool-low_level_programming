@@ -2,7 +2,7 @@
 #include <ctype.h>
 #include <stdlib.h>
 /**
- * main - Prints all arguments it receives.
+ * main - Program that adds positive numbers
  * @argc: Length of argv
  * @argv: Pointer with the number of elements
  * Return: Return
@@ -10,16 +10,19 @@
 int main(int argc, char *argv[])
 {
 	int i;
+	int c;
 	int sum = 0;
-	
+
 	for (i = 1; i < argc; i++)
 	{
-		if (isdigit(*argv++) == 0)
+		for (c = 0; argv[i][c] != '\0'; c++)
+	{
+		if (!isdigit(argv[i][c]))
 		{
-			return (0);
 			printf("Error\n");
 			return (1);
 		}
+	}
 	sum += atoi(argv[i]);
 	}
 	printf("%d\n", sum);
