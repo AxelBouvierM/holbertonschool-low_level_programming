@@ -1,12 +1,10 @@
 #include <stdio.h>
 /**
- * main - prints the number of arguments passed into it
+ * main - Prints all arguments it receives.
  * @argc: Length of argv
  * @argv: Pointer with the number of elements
  * Return: Return
  */
 int main(int argc, char *argv[])
 {
-	printf("%d\n", argc - 1);
-	return (0);
-}
+	
