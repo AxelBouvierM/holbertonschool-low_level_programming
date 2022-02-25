@@ -1,14 +1,12 @@
 #include <stdio.h>
 /**
- * _pow_recursion - function the value of x raised to the power of y.
- * @x: First variable.
- * @y: Second function.
+ * main - prints its name, followed by a new line.
+ * @argc: Length of argv
+ * @argv: Pointer with the number of elements
  * Return: Return the value of x raised to the power of y
  */
 int main(int argc, char *argv[])
 {
-	int i;
-	for (i = 0; i < argc; i++)
-		printf("%s\n", argv[i]);
+	printf("%s\n", argv[0]);
 	return (0);
 }
