@@ -14,7 +14,7 @@ char *argstostr(int ac, char **av)
 
 	if (ac == 0 || av == NULL)
 	{
-		return (NULL);
+		return ('\0');
 	}
 	for (i = 0; i < ac; i++)
 	{
@@ -36,8 +36,7 @@ char *argstostr(int ac, char **av)
  * @s: pointer to a
  * Return: length if success.
  */
-
-	int _strlen(char *s)
+int _strlen(char *s)
 {
 	int length = 0;
 
@@ -58,15 +57,19 @@ char *argstostr(int ac, char **av)
  */
 char *_strcat(char *dest, char *src)
 {
-	int i;
-	int length = _strlen(dest);
+	int n = 0;
+	int i = 0;
 
-	for (i = 0; i <= length; i++)
+	while (dest[n] != '\0')
 	{
-	if (src[i] != '\0')
-		dest[length + i] = src[i];
-	else
-		dest[length + i] = '\0';
+		n++;
 	}
+	while (src[i] != '\0')
+	{
+		dest[n] = src[i];
+		n++;
+		i++;
+	}
+	dest[n] = '\n';
 	return (dest);
 }
