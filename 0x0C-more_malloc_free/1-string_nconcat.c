@@ -18,7 +18,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s1 == NULL)
 		return ("");
 	if (s2 == NULL)
-	{
 		return ("");
 	while (s2[z] != '\0')
 	{
