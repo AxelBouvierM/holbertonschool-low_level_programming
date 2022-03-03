@@ -9,8 +9,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	char *str;
 	unsigned int i;
-	unsigned int x;
-
+	
 	if (nmemb == 0 || size == 0)
 	{
 		return (NULL);
@@ -20,9 +19,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	{
 		return (NULL);
 	}
-	for (i = 0; i < nmemb; i++)
+	for (i = 0; i < nmemb * size; i++)
 		str[i] = 0;
-	for (x = 0; x < size; x++)
-		str[x] = 0;
 	return (str);
 }
