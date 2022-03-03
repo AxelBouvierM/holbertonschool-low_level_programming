@@ -4,6 +4,7 @@
  * _calloc - Multiplies two numbers.
  * @nmemb: Variable elemnets.
  * @size: Variable bytes.
+ * Return: Return pointer with a string
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
