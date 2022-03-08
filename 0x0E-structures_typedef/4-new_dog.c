@@ -2,34 +2,31 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
-* _strdup - returns a pointer to a newly allocated space in memory.
-* @str: Size of string.
-* Return: Return string.
-*/
+ *_strdup - strdup C function
+ * @str: string to duplicate
+ * Return: str
+ */
 char *_strdup(char *str)
 {
-	char *s;
-	int i = 0;
-	int n = 0;
+	int i, n = 0;
+	char *strcopy;
 
 	if (str == NULL)
-	{
 		return (NULL);
-	}
-	while (str[n] != '\0')
-	{
+	do {
 		n++;
-	}
-	s = malloc(n + 1 * sizeof(char));
-	if (s == NULL)
-	{
+	} while (str[n - 1]);
+	strcopy = malloc(sizeof(char) * n);
+	if (strcopy == NULL)
 		return (NULL);
-	}
-	for ( ; i < n; i++)
-		s[i] = str[i];
-	return (s);
-}
 
+	for (i = 0; i < n; i++)
+	{
+		strcopy[i] = str[i];
+	}
+
+	return (strcopy);
+}
 /**
  * *new_dog - Creates a new dog.
  * @name: Name of...
