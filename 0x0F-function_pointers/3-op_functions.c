@@ -39,7 +39,7 @@ int op_mul(int a, int b)
  * Return: The result of the division of a by b
  */
 int op_div(int a, int b)
-{	
+{
 	if (b == 0)
 	{
 		printf("Error\n");
