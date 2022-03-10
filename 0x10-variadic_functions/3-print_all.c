@@ -2,12 +2,13 @@
 #include <stdarg.h>
 #include <stdio.h>
 /**
- * print_all - Pritns strings
+ * print_string - Pritns strings
+ * @args: Arguments
   */
 void print_string(va_list args)
 {
 	char *a;
-	
+
 	a = va_arg(args, char *);
 	if (a == NULL)
 	{
@@ -19,7 +20,7 @@ void print_string(va_list args)
  * print_number - Print number
  * @args: Arguments.
  */
- void print_number(va_list args)
+void print_number(va_list args)
 {
 	printf("%d", va_arg(args, int));
 }
@@ -40,6 +41,10 @@ void print_float(va_list args)
 	printf("%f", va_arg(args, double));
 }
 
+/**
+ * print_all - Print all arguments
+ * @format: Format of arguments
+ */
 void print_all(const char * const format, ...)
 {
 	print_t print[] = {
