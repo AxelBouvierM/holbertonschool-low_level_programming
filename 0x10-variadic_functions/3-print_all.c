@@ -13,6 +13,7 @@ void print_string(va_list args)
 	if (a == NULL)
 	{
 		printf("(nil)");
+		return;
 	}
 	printf("%s", a);
 }
@@ -73,7 +74,6 @@ void print_all(const char * const format, ...)
 				printf("%s", separator);
 				print[count].f(arg);
 				separator = ", ";
-				break;
 			}
 			count++;
 		}
