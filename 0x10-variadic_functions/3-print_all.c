@@ -22,7 +22,7 @@ void print_string(va_list args)
  */
 void print_number(va_list args)
 {
-	printf("%d", va_arg(args, int));
+	printf("%i", va_arg(args, int));
 }
 /**
 * print_char - Print character
@@ -66,7 +66,7 @@ void print_all(const char * const format, ...)
 	while (format != NULL && format[j] != '\0')
 	{
 		count = 0;
-		while (count < 4) 
+		while (count < 4)
 		{
 			if (print[count].print[0] == format[j])
 			{
