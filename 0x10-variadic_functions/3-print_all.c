@@ -58,22 +58,26 @@ void print_all(const char * const format, ...)
 	int count = 0;
 	int j = 0;
 	va_list arg;
+	char *separator;
 
 	va_start(arg, format);
+	separator = "";
 
 	while (format[j] != '\0')
 	{
 		count = 0;
-		while (print[count].print != NULL) 
+		while (count < 4) 
 		{
 			if (print[count].print[0] == format[j])
 			{
+				printf("%s", separator);
 				print[count].f(arg);
-				printf(", ");
+				separator = ", ";
 			}
 			count++;
 		}
 		j++;
 	}
 	printf("\n");
+	va_end(arg);
 }
