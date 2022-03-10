@@ -22,7 +22,7 @@ void print_string(va_list args)
  */
 void print_number(va_list args)
 {
-	printf("%i", va_arg(args, int));
+	printf("%d", va_arg(args, int));
 }
 /**
 * print_char - Print character
@@ -73,6 +73,7 @@ void print_all(const char * const format, ...)
 				printf("%s", separator);
 				print[count].f(arg);
 				separator = ", ";
+				break;
 			}
 			count++;
 		}
