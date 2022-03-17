@@ -27,7 +27,7 @@ int _strlen(const char *s)
 list_t *add_node(list_t **head, const char *str)
 {
 	struct list_s *new_struct = malloc(sizeof(list_t));
-	
+
 	if (new_struct == NULL)
 	{
 		return (NULL);
