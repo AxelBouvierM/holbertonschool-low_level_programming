@@ -33,22 +33,22 @@ list_t *add_node_end(list_t **head, const char *str)
 	{
 		return (NULL);
 	}
-	
+
 	new_struct_end->str = strdup(str);
 	new_struct_end->len = _strlen(str);
 	new_struct_end->next = NULL;
-	
+
 	if (*head == NULL)
 	{
 		*head = new_struct_end;
 		return (new_struct_end);
 	}
-	
+
 	temp = *head;
 	while (temp->next != NULL)
 	{
 		temp = temp->next;
-	}	
+	}
 	temp->next = new_struct_end;
 
 	return (new_struct_end);
