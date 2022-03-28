@@ -52,11 +52,11 @@ int main(int argc, char *argv[])
 	buf = buffer(argv[2]);
 	fd = open(argv[1], O_RDONLY);
 	rd = read(fd, buf, 1024);
-	x = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
+	x = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR | 
+						S_IRGRP | S_IWGRP | S_IROTH);
 	if (fd == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-		free(buf);
 		exit(98);
 	}
 	if (x == -1)
