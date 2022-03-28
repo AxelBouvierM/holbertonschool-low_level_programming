@@ -6,7 +6,7 @@
  */
 char *buffer(char *filename)
 {
-	char *buf = 0;
+	char *buf;
 
 	buf = malloc(sizeof(char) * 1024);
 	if (buf == NULL)
@@ -23,9 +23,8 @@ char *buffer(char *filename)
  */
 void close_file(int fd)
 {
-	int i = 0;
-
-	i = close(fd);
+	int i = close(fd);
+	
 	if (i == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
