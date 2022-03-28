@@ -53,7 +53,7 @@ int main(int argc, char *argv[])
 	buf = buffer(argv[2]);
 	fd = open(argv[1], O_RDONLY);
 	rd = read(fd, buf, 1024);
-	x = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR | 
+	x = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR |
 						S_IRGRP | S_IWGRP | S_IROTH);
 	while (rd > 0)
 	{
@@ -63,7 +63,7 @@ int main(int argc, char *argv[])
 			exit(98);
 		}
 		wr = write(x, buf, rd);
-		if (x == -1 || wr == -1)
+		if (x == -1 || wr != rd)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			exit(99);
