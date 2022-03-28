@@ -23,8 +23,10 @@ char *buffer(char *filename)
  */
 void close_file(int fd)
 {
-	int i = close(fd);
-	
+	int i;
+
+	i =	close(fd);
+
 	if (i == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
