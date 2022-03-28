@@ -1,4 +1,8 @@
 #include "main.h"
+
+char *buffer(char *filename);
+void close_file(int fd);
+
 /**
  * buffer - Function that creates a buffer for 1024 bytes
  * @filename: Name of a buffer
