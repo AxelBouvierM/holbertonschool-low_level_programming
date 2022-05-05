@@ -5,10 +5,10 @@
  * @n: Elements of the list
  * Return: the address of the new element, or NULL if it failed
  */
-dlistint_t *add_dnodeint_end(dlistint_t **head, const int n);
+dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
 	struct dlistint_s *new_node = malloc(sizeof(dlistint_t));
-	listint_t *tmp;
+	dlistint_t *tmp = *head;
 
 	if (new_node == NULL)
 	{
@@ -25,12 +25,11 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n);
 	}
 	else
 	{
-		tmp = *head;
 		while (tmp->next != NULL)
 		{
 			tmp = tmp->next;
 		}
-		tmp->next = new_node
+		tmp->next = new_node;
 		new_node->prev = tmp;
 
 	}
