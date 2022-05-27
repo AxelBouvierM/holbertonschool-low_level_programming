@@ -18,12 +18,12 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (tmp == NULL)
 		return (0);
 
-	tmp->key = (char *)strdup(key);
-	tmp->value = (char *)strdup(value);
+	tmp->key = strdup(key);
+	tmp->value = strdup(value);
 	tmp->next = NULL;
 	if (tmp->value == NULL || tmp->key == NULL)
 	{
-		free(tmp), free(tmp->value), free(tmp->key);
+		free(tmp), free(tmp->key), free(tmp->value);
 		return (0);
 	}
 	if (ht->array[index] == NULL)
@@ -38,8 +38,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		if (strcmp(aux->key, key) == 0)
 		{
-			free(tmp->value);
-			ht->array[index]->value = (char *)value;
+			free(tmp->key), free(tmp->value), free(tmp);
+			ht->array[index]->value = (char *)strdup(value);
 			return (1);
 		}
 		aux = aux->next;
