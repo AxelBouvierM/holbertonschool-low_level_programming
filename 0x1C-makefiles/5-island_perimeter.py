@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-
+"""returns the perimeter of the island described in grid"""
 def island_perimeter(grid):
+    """returns the perimeter of the island described in grid"""
     largo = 0
     ancho = 0
     for l in range(len(grid)):
